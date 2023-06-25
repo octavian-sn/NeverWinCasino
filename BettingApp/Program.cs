@@ -22,9 +22,7 @@ while (player.Cash > 0)
     {
         int pot = player.GiveCash(amount) * 2;
 
-        double number = random.NextDouble();
-
-        if(number > odds)
+        if(random.NextDouble() > odds)
         {
             player.ReceiveCash(pot);
             Console.WriteLine("Hey, you won: " + pot + " dollars! Congratulations!");
